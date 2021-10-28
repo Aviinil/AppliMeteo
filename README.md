@@ -4,8 +4,8 @@
 
 ## Auteurs 🐷
 Les participants du projet :
-* **Melisa Bourkeb** _alias_ [@melissacroko](https://github.com/melissacroko)
-* **Clément Lavallé** _alias_ [@Aviinil](https://github.com/Aviinil)
+* **Melissa Bourkeb** _alias_ [@melissacroko](https://github.com/melissacroko)
+* **Clément Lavallée** _alias_ [@Aviinil](https://github.com/Aviinil)
 * **Kévin Lestoquoy** _alias_ [@Pandalux](https://github.com/Pandalux)
 
 ## Diagramme UML
@@ -13,17 +13,15 @@ Les participants du projet :
 - Soon
 
 Une petite citation ...
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
+> Une petite cigale,
+> Se lève un matin,
+> Et ramasse des petites graines,
+> Pour passer l'hiver,
+> Au chaud.
 
 ## Installation
 
-Le projet nécessite la présence de ...
+Le projet nécessite la présence de #Maven# et #Spring#.
 
 Pour installer le projet :
 
