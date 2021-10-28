@@ -1,4 +1,4 @@
-package classes;
+package entites;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -9,9 +9,8 @@ import dataTypes.CodePostal;
 import dataTypes.NomVille;
 
 public class Lieu {
+	
 	static int compteur = 0;
-	//Les records �tant en preview pour Java, nous n'arrivions pas � en cr�er
-		//POur ne pas perdre de temps, nous avons fait des classes.
 	@NotNull
 	final private int id;
 	@NotNull

@@ -4,16 +4,16 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import classes.Alerte;
-import classes.AlerteTemperature;
-import classes.Lieu;
-import classes.Utilisateur;
-import classes.Weather;
 import dataTypes.QualiteAir;
 import dataTypes.Temperature;
 import dataTypes.UOMTemp;
 import dataTypes.UOMWind;
 import dataTypes.VitesseVent;
+import entites.Alerte;
+import entites.AlerteTemperature;
+import entites.Lieu;
+import entites.Utilisateur;
+import entites.Weather;
 
 public class Application {
 
@@ -32,7 +32,8 @@ public class Application {
 		
 		System.out.println(user.getAlertes().get(0).toString());
 		
-		Temperature tempBesac = new Temperature(-5.0, UOMTemp.CELSIUS);
+		//Temperature tempBesac = new Temperature(-5.0, UOMTemp.CELSIUS);
+		Temperature tempBesac = new Temperature(28.0, UOMTemp.FAHRENHEIT);
 		QualiteAir qualiBesac = new QualiteAir(4);
 		VitesseVent ventBesac = new VitesseVent(48.0, UOMWind.KM_H);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -51,5 +52,6 @@ public class Application {
 				System.out.println("Alerte délenchée à " + a.getLieu().toString());
 			}
 		}
+
 	}
 }
