@@ -13,7 +13,7 @@ public class AlerteTemperature implements Alerte {
 		seuil = temp;
 		lieu = l;
 	}
-	
+	@Override
 	public boolean declencherAlerte(Date d) {
 		//a affiner la date par jour et / ou heure
 		if(lieu.getWeathers().containsKey(d)) {
@@ -27,9 +27,9 @@ public class AlerteTemperature implements Alerte {
 	}
 
 	public String toString() {
-		return "Alerte enregistrée à " + lieu.toString() + " pour une température de " + seuil.toString();
+		return "Alerte pour une température de " + seuil.toString();
 	}
-	
+	@Override
 	public Lieu getLieu() {
 		return lieu;
 	}

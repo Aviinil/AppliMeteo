@@ -52,10 +52,7 @@ public final class Temperature {
 	}
 	
 	public boolean estInferieure(Temperature t) {
-		//Axe d'amelioration => Faire les conversions si les UOM sont différentes
-		/*if (t.getUOM().equals(this.getUOM())) {
-			return this.getValue() < t.getValue();
-		} */
+		
 		return this.getValue() < t.convertTemp(this.getUOM());
 	}
 	public double convertTemp(UOMTemp voulu) {

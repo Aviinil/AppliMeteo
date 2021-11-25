@@ -11,6 +11,7 @@ import dataTypes.UOMWind;
 import dataTypes.VitesseVent;
 import entites.Alerte;
 import entites.AlerteTemperature;
+import entites.AlerteVent;
 import entites.Lieu;
 import entites.Utilisateur;
 import entites.Weather;
@@ -29,8 +30,11 @@ public class Application {
 		Temperature tempAlerte = new Temperature(0.0, UOMTemp.CELSIUS);
 		Alerte alerte = new AlerteTemperature(tempAlerte, Besancon);
 		user.ajoutAlerte(alerte);
-		
-		System.out.println(user.getAlertes().get(0).toString());
+		VitesseVent ventAlerte = new VitesseVent(20, UOMWind.NOEUDS); //37km/h (pour déclencher)
+		alerte = new AlerteVent(ventAlerte, Besancon);
+		user.ajoutAlerte(alerte);
+		user.getAlertes().forEach((a) -> System.out.println(a.toString()));
+
 		
 		//Temperature tempBesac = new Temperature(-5.0, UOMTemp.CELSIUS);
 		Temperature tempBesac = new Temperature(28.0, UOMTemp.FAHRENHEIT);
@@ -49,7 +53,9 @@ public class Application {
 		Date dateActuelle = sdf.parse(date);
 		for(Alerte a : user.getAlertes()) {
 			if(a.declencherAlerte(dateActuelle)) {
-				System.out.println("Alerte délenchée à " + a.getLieu().toString());
+				//Alerte sur temperature se déclenche si la tempéature de la ville est inférieure au seuil
+				//ALerte sur vitesse du vent se déclenche si la vitesse du vent dans la ville est supérieur au seuil
+				System.out.println(a.toString()+ " déclenchée à " + a.getLieu().toString());
 			}
 		}
 
